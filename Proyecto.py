@@ -7,10 +7,8 @@ def destruir(ven):
     else:
         pass
 def inicial (x):
-    destruir(x)
     ven_inicial= tkinter.Tk()
     def ven1 ():
-        
         ventana1 = tkinter.Tk()
         ventana1.geometry("500x400")
 #Seccion de arriba y descripcion de que hacer para que funcione el programa
