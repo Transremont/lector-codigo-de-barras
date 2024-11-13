@@ -4,7 +4,7 @@ def ven1 ():
         ventana1 = tkinter.Tk()
         ventana1.geometry("500x400")
 #Seccion de arriba y descripcion de que hacer para que funcione el programa
-        btn_ven1= tkinter.Button(ventana1, text="Ventana 1")
+        btn_ven1= tkinter.Button(ventana1, text="Ventana 1", command=inicial)
         btn_ven1.place(x=0, y=0)
         btn_ven2= tkinter.Button(ventana1, text="Ventana 2", command=ven2)
         btn_ven2.place(x=63, y=0)
@@ -56,10 +56,16 @@ def ven2 ():
         #def Cam_tex():
                #texto= "Pc,Dell,AH305,Bueno"
                #Ejemplo["text"]=texto
-        ventana2=tkinter.Tk()
-        ancho_pantalla = ventana2.winfo_screenwidth()
-        alto_pantalla = ventana2.winfo_screenheight()
-        ventana2.geometry(f"{ancho_pantalla}x{alto_pantalla}")
+        ventana2 = tkinter.Tk()
+        ventana2.geometry("500x400")
+
+        #Seccion de arriba y descripcion de que hacer para que funcione el programa
+        btn_ven1= tkinter.Button(ventana2, text="Ventana 1", command=inicial)
+        btn_ven1.place(x=0, y=0)
+        btn_ven2= tkinter.Button(ventana2, text="Ventana 2", command=ven2)
+        btn_ven2.place(x=63, y=0)
+        titulo= tkinter.Label(ventana2, text="Escanea el codigo de barras", pady= 20)
+        titulo.pack()
         
         rel=tkinter.Label(ventana2, text="", height=5, width=50)
         rel.grid(row=1, column=1)
@@ -126,6 +132,7 @@ def ven2 ():
 def inicial ():
     ven_inicial= tkinter.Tk()
     ven_inicial.geometry("500x400")
+    ven_inicial.after(5000, ven_inicial.destroy )
 
 #Descripcion 
     texto_desc=tkinter.Label(ven_inicial, text="Bienvenido a la aplicacion Control de activos")
