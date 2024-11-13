@@ -65,7 +65,4 @@ def ven2 ():
         ventana2.geometry("500x400")
         btn_ven1= tkinter.Button(ventana2, text="Ventana 1", command=inicial1(ventana2))
         btn_ven1.place(x=0, y=0)
-
-
-
         ventana2.mainloop()
